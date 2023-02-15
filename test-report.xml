@@ -1,43 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <testExecutions version="1">
   <file path="/home/sylk/IdeaProjects/xpfarm/20230215_connect_four/__tests__/game.test.js">
-    <testCase name="Game should be created... should be a Game class..." duration="2"/>
+    <testCase name="Game should be created... should be a Game class..." duration="1"/>
     <testCase name="Game should be created... should be able to start..." duration="0"/>
     <testCase name="Game should be created... players should be there..." duration="0"/>
     <testCase name="Game should be created... rack should be there..." duration="0"/>
-    <testCase name="Game should be created... rack should be displayed..." duration="1"/>
-    <testCase name="Game should be created... start message should be displayed..." duration="0"/>
-    <testCase name="Game should be created... creation message should be displayed..." duration="1">
-      <failure message="Error: expect(received).toContain(expected) // indexOf"><![CDATA[Error: expect(received).toContain(expected) // indexOf
-
-Expected substring: "Empty rack is created."
-Received string:    "Connect Four game starts| | | | | | | |·
-+-+-+-+-+-+-+-+
-| | | | | | | |·
-+-+-+-+-+-+-+-+
-| | | | | | | |·
-+-+-+-+-+-+-+-+
-| | | | | | | |·
-+-+-+-+-+-+-+-+
-| | | | | | | |·
-+-+-+-+-+-+-+-+
-| | | | | | | |·
-+-+-+-+-+-+-+-+"
-    at Object.<anonymous> (/home/sylk/IdeaProjects/xpfarm/20230215_connect_four/__tests__/game.test.js:28:24)
-    at Object.asyncJestTest (/home/sylk/IdeaProjects/xpfarm/20230215_connect_four/node_modules/jest-jasmine2/build/jasmineAsyncInstall.js:106:37)
-    at /home/sylk/IdeaProjects/xpfarm/20230215_connect_four/node_modules/jest-jasmine2/build/queueRunner.js:45:12
-    at new Promise (<anonymous>)
-    at mapper (/home/sylk/IdeaProjects/xpfarm/20230215_connect_four/node_modules/jest-jasmine2/build/queueRunner.js:28:19)
-    at /home/sylk/IdeaProjects/xpfarm/20230215_connect_four/node_modules/jest-jasmine2/build/queueRunner.js:75:41
-    at processTicksAndRejections (node:internal/process/task_queues:95:5)]]></failure>
-    </testCase>
-  </file>
-  <file path="/home/sylk/IdeaProjects/xpfarm/20230215_connect_four/__tests__/player.test.js">
-    <testCase name="Player should be created... should be a Player class..." duration="2"/>
+    <testCase name="Game should be created... rack should be displayed..." duration="0"/>
+    <testCase name="Game should be created... start message should be displayed..." duration="1"/>
+    <testCase name="Game should be created... creation message should be displayed..." duration="0"/>
   </file>
   <file path="/home/sylk/IdeaProjects/xpfarm/20230215_connect_four/__tests__/rack.test.js">
     <testCase name="Rack should be created... should be a Rack class..." duration="1"/>
     <testCase name="Rack should be created... should be a displayed..." duration="0"/>
-    <testCase name="Rack should be created... empty rack displayed..." duration="0"/>
+    <testCase name="Rack should be created... empty rack displayed..." duration="1"/>
+  </file>
+  <file path="/home/sylk/IdeaProjects/xpfarm/20230215_connect_four/__tests__/player.test.js">
+    <testCase name="Player should be created... should be a Player class..." duration="1"/>
   </file>
 </testExecutions>
