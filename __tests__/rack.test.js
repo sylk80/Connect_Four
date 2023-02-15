@@ -15,3 +15,11 @@ describe('Rack should be created...', () => {
         expect(output).toContain(EMPTY_RACK);
     });
 });
+
+describe('Rack should register the move...', () => {
+    const rack = new Rack();
+    test('should be a Rack class...', () => {
+        const newMove = rack.placeToken()
+        expect(newMove).toBeDefined();
+    });
+});

@@ -103,15 +103,15 @@ Empty rack is created.
 
 :dart: Player should be selected :heavy_check_mark:
 
-:dart: Player should pick a column
+:dart: Player should pick a column :heavy_check_mark:
+
+:dart: Rack should register the token
 
 :dart: Token should be in a valid column
 
 :dart: Token should occupy the lowest available space within the column
 
 :dart: Token should be displayed in the column
-
-:dart: Rack should register the token
 
 :dart: Game should register the move
 
