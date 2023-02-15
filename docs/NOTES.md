@@ -77,7 +77,7 @@ Connect Four game starts
 Empty rack is created.
 ```
 
-### Unit tests
+### Unit tests 1
 
 :dart: Game should be created :heavy_check_mark:
 
@@ -90,3 +90,28 @@ Empty rack is created.
 :dart: Start message should be displayed :heavy_check_mark:
 
 :dart: Creation message should be displayed :heavy_check_mark:
+
+### User acceptance test 2
+
+:heavy_plus_sign: Given the game has started
+
+:construction: When the first player makes a move
+
+:heavy_exclamation_mark: Then it should be visible on the board
+
+### Unit tests 2
+
+:dart: Player should be selected
+
+:dart: Player should pick a column
+
+:dart: Rack should register the token
+
+:dart: Token should be in a valid column
+
+:dart: Token should occupy the lowest available space within the column
+
+:dart: Token should be displayed in the column
+
+:dart: Game should register the move
+
