@@ -85,4 +85,8 @@ Empty rack is created.
 
 :dart: Rack should be initialized :heavy_check_mark:
 
-:dart: Rack should be displayed
+:dart: Rack should be displayed :heavy_check_mark:
+
+:dart: Start message should be displayed 
+
+:dart: Creation message should be displayed
