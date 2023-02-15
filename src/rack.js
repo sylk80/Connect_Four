@@ -6,6 +6,10 @@ class Rack {
         return EMPTY_RACK
     }
 
+    placeToken() {
+        return null
+    }
+
 }
 
 module.exports = Rack
