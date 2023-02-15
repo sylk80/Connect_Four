@@ -58,6 +58,7 @@ of four of one's own tokens
 :heavy_exclamation_mark: Then an empty rack is displays
 
 ```
+
 Connect Four game starts
 
 | | | | | | | | 

@@ -1,6 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <testExecutions version="1">
-  <file path="/home/sylk/20230215_connect_four/bdd/features/templatefeature.steps.js">
-    <testCase name="Is this a template for jumpstart? I hace created a jumpstart" duration="2"/>
+  <file path="/home/sylk/IdeaProjects/xpfarm/20230215_connect_four/bdd/features/empty_rack_feature.steps.js">
+    <testCase name="Game should start with an empty rack Empty rack creation" duration="2">
+      <failure message="TypeError: Game is not a constructor"><![CDATA[TypeError: Game is not a constructor
+    at Object.stepFunction (/home/sylk/IdeaProjects/xpfarm/20230215_connect_four/bdd/features/empty_rack_feature.steps.js:15:12)
+    at /home/sylk/IdeaProjects/xpfarm/20230215_connect_four/node_modules/jest-cucumber/src/feature-definition-creation.ts:134:65
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)]]></failure>
+    </testCase>
   </file>
 </testExecutions>
