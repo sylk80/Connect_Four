@@ -28,3 +28,11 @@ describe('Game should be created...', () => {
         expect(output).toContain("Empty rack is created.");
     });
   });
+
+describe('First move can be made, when...', () => {
+    const game = new Game();
+    test('current player can be selected...', () => {
+        const currentPlayer = game.currentPlayer()
+        expect(currentPlayer).toBeDefined();
+    });
+});
