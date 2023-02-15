@@ -18,8 +18,12 @@ describe('Rack should be created...', () => {
 
 describe('Rack should register the move...', () => {
     const rack = new Rack();
-    test('should be a Rack class...', () => {
+    test('should be able to register moved...', () => {
         const newMove = rack.placeToken()
         expect(newMove).toBeDefined();
+    });
+    test('should require color and column...', () => {
+        const newMove = rack.placeToken(1, 1)
+        expect(newMove).toBe("Valid color required as first parameter");
     });
 });
