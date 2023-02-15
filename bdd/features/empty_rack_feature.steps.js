@@ -9,10 +9,12 @@ const {
 const Game = require('../../src/game')
 
 let game
+let players
 let output
 
 Given('the players are present', () => {
     game = new Game()
+    players = game.players()
 })
 
 When('the game starts', () => {
