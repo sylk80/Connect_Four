@@ -101,17 +101,17 @@ Empty rack is created.
 
 ### Unit tests 2
 
-:dart: Player should be selected
+:dart: Player should be selected :heavy_check_mark:
 
 :dart: Player should pick a column
-
-:dart: Rack should register the token
 
 :dart: Token should be in a valid column
 
 :dart: Token should occupy the lowest available space within the column
 
 :dart: Token should be displayed in the column
+
+:dart: Rack should register the token
 
 :dart: Game should register the move
 

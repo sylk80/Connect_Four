@@ -31,6 +31,7 @@ describe('Game should be created...', () => {
 
 describe('First move can be made, when...', () => {
     const game = new Game();
+    const output = game.start()
     const currentPlayer = game.currentPlayer()
     const nextPlayer = game.nextPlayer()
     test('current player can be selected...', () => {
