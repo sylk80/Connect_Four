@@ -1,4 +1,5 @@
 const Player = require("./player.js")
+const Rack = require("./rack.js")
 class Game {
 
     start() {
@@ -10,7 +11,7 @@ class Game {
     }
 
     rack() {
-        return null
+        return new Rack()
     }
 
 }
