@@ -9,6 +9,10 @@ class Game {
         return new Player()
     }
 
+    rack() {
+        return null
+    }
+
 }
 
 module.exports = Game
