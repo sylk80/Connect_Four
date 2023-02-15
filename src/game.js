@@ -1,3 +1,4 @@
+const Player = require("./player.js")
 class Game {
 
     start() {
@@ -5,7 +6,7 @@ class Game {
     }
 
     players() {
-        return null
+        return new Player()
     }
 
 }
