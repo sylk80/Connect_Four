@@ -13,4 +13,8 @@ describe('Game should be created...', () => {
         const players = game.players()
         expect(players).toBeDefined();
     });
+    test('rack should be there...', () => {
+        const rack = game.rack()
+        expect(rack).toBeDefined();
+    });
   });

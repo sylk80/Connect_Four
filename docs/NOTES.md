@@ -81,7 +81,7 @@ Empty rack is created.
 
 :dart: Game should be created :heavy_check_mark:
 
-:dart: Players should be initialized
+:dart: Players should be initialized :heavy_check_mark:
 
 :dart: Rack should be initialized
 
