@@ -1,9 +1,12 @@
 const Player = require("./player.js")
 const Rack = require("./rack.js")
+
+const startMessage = "Connect Four game starts"
 class Game {
 
+
     start() {
-        return this.rack().display()
+        return startMessage + this.rack().display()
     }
 
     players() {
