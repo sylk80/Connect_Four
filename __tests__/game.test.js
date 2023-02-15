@@ -24,4 +24,7 @@ describe('Game should be created...', () => {
     test('start message should be displayed...', () => {
         expect(output).toContain("Connect Four game starts");
     });
+    test('creation message should be displayed...', () => {
+        expect(output).toContain("Empty rack is created.");
+    });
   });
