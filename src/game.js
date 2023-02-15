@@ -16,6 +16,10 @@ class Game {
             creationMessage
     }
 
+    currentPlayer() {
+        return null
+    }
+
     players() {
         return new Player()
     }
