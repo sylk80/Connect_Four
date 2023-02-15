@@ -35,4 +35,8 @@ describe('First move can be made, when...', () => {
         const currentPlayer = game.currentPlayer()
         expect(currentPlayer).toBeDefined();
     });
+    test('next player can be selected...', () => {
+        const nextPlayer = game.nextPlayer()
+        expect(nextPlayer).toBeDefined();
+    });
 });
