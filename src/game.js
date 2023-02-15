@@ -4,6 +4,10 @@ class Game {
         return null
     }
 
+    players() {
+        return null
+    }
+
 }
 
 module.exports = Game
