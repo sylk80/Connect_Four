@@ -3,7 +3,7 @@ const Rack = require("./rack.js")
 class Game {
 
     start() {
-        return null
+        return this.rack().display()
     }
 
     players() {
