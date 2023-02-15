@@ -1,3 +1,4 @@
+const COLUMNS = 6
 class Player {
 
     constructor(color) {
@@ -5,7 +6,7 @@ class Player {
     }
 
     nextColumn( ) {
-        return null
+        return Math.floor(Math.random() * COLUMNS)+1
     }
 }
 
