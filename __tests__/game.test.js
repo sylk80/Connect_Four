@@ -1,4 +1,4 @@
-const { Game} = require('../src/game.js');
+const Game = require('../src/game.js');
 
 describe('Game should be created...', () => {
     const game = new Game();

@@ -6,7 +6,7 @@ const {
     Fusion,
 } = require("jest-cucumber-fusion")
 
-const { Game } = require('../../src/game')
+const Game = require('../../src/game')
 
 let game
 let output
