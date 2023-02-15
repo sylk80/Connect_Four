@@ -31,12 +31,15 @@ describe('Game should be created...', () => {
 
 describe('First move can be made, when...', () => {
     const game = new Game();
+    const currentPlayer = game.currentPlayer()
+    const nextPlayer = game.nextPlayer()
     test('current player can be selected...', () => {
-        const currentPlayer = game.currentPlayer()
         expect(currentPlayer).toBeDefined();
     });
     test('next player can be selected...', () => {
-        const nextPlayer = game.nextPlayer()
         expect(nextPlayer).toBeDefined();
+    });
+    test('current and next player should be different...', () => {
+        expect(nextPlayer).not.toEqual(currentPlayer);
     });
 });
