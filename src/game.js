@@ -17,15 +17,17 @@ class Game {
     }
 
     currentPlayer() {
-        return null
+        return this.players()[0]
     }
 
     nextPlayer() {
-        return null
+        return this.players()[1]
     }
 
     players() {
-        return new Player()
+        let yellowPlayer = new Player("YELLOW")
+        let redPlayer = new Player("RED")
+        return [yellowPlayer,redPlayer]
     }
 
     rack() {
