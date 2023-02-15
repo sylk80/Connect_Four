@@ -1,4 +1,5 @@
 const {EMPTY_RACK} = require("../__tests__/mock/mockObjects");
+const colors = ["Y", "R"]
 
 class Rack {
 
@@ -6,8 +7,12 @@ class Rack {
         return EMPTY_RACK
     }
 
-    placeToken() {
-        return null
+    placeToken(color) {
+        if(colors.indexOf(color) < 0) {
+            return "Valid color - Y / R - required as first parameter"
+        } else {
+            return null
+        }
     }
 
 }

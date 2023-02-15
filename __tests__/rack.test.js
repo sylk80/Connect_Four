@@ -24,6 +24,6 @@ describe('Rack should register the move...', () => {
     });
     test('should require color and column...', () => {
         const newMove = rack.placeToken(1, 1)
-        expect(newMove).toBe("Valid color required as first parameter");
+        expect(newMove).toBe("Valid color - Y / R - required as first parameter");
     });
 });
