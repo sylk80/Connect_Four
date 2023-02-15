@@ -20,6 +20,10 @@ class Game {
         return null
     }
 
+    nextPlayer() {
+        return null
+    }
+
     players() {
         return new Player()
     }
