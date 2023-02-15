@@ -1,8 +1,12 @@
 const { Game} = require('../src/game.js');
 
 describe('Game should be created...', () => {
+    const game = new Game();
     test('should be a Game class...', () => {
-      const game = new Game();
       expect(game).toBeDefined();
+    });
+    test('should be able to start...', () => {
+        const output = game.start()
+        expect(output).toBeDefined();
     });
   });
