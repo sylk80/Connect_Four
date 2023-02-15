@@ -79,7 +79,7 @@ Empty rack is created.
 
 ### Unit tests
 
-:dart: Game should be created
+:dart: Game should be created :heavy_check_mark:
 
 :dart: Players should be initialized
 

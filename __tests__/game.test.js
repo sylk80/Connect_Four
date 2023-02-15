@@ -9,4 +9,8 @@ describe('Game should be created...', () => {
         const output = game.start()
         expect(output).toBeDefined();
     });
+    test('players should be there...', () => {
+        const players = game.players()
+        expect(players).toBeDefined();
+    });
   });
