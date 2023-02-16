@@ -30,4 +30,8 @@ describe('Rack should register the move...', () => {
         const newMove = rack.placeToken("Y", 100)
         expect(newMove).toBe("Valid column - 1-7 - required as second parameter");
     });
+    test('should register the tokens placement...', () => {
+        const newMove = rack.placeToken("Y", 1)
+        expect(newMove).toBe("YELLOW has placed a token");
+    });
 });

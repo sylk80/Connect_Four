@@ -99,6 +99,26 @@ Empty rack is created.
 
 :heavy_exclamation_mark: Then it should be visible on the board
 
+```
+
+YELLOW has placed a token
+
+| | | | | | | | 
++-+-+-+-+-+-+-+
+| | | | | | | | 
++-+-+-+-+-+-+-+
+| | | | | | | | 
++-+-+-+-+-+-+-+
+| | | | | | | | 
++-+-+-+-+-+-+-+
+| | | | | | | | 
++-+-+-+-+-+-+-+
+| | | |Y| | | | 
++-+-+-+-+-+-+-+
+
+It is RED's turn.
+```
+
 ### Unit tests 2
 
 :dart: Player should be selected :heavy_check_mark:
