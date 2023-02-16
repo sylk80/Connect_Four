@@ -26,7 +26,12 @@ class Rack {
     }
 
     addTokenToRack(color, column) {
-        this.tokenList.push({color: color, column: column, row: 0})
+        this.tokenList.push({color: color, column: column, row: this.getLowestInColumn(column)})
+    }
+
+    getLowestInColumn(column) {
+        let existingTokens = this.tokenList.filter(element => element.column === column)
+        return existingTokens.length + 1
     }
 
     placementMessage(color) {

@@ -60,14 +60,14 @@ describe('Rack should register the move...', () => {
         const rack2 = new Rack();
         rack2.placeToken("Y", 1)
         const yellowTokens = rack2.getTokenList("Y")
-        expect(yellowTokens[0].row).toBe(0)
+        expect(yellowTokens[0].row).toBe(1)
     });
     test('tokens should always occupy the lowest available space within the column..', () => {
         const rack2 = new Rack();
         rack2.placeToken("Y", 1)
         rack2.placeToken("Y", 1)
         const yellowTokens = rack2.getTokenList("Y")
-        expect(yellowTokens[0].row).toBe(0)
-        expect(yellowTokens[1].row).toBe(1)
+        expect(yellowTokens[0].row).toBe(1)
+        expect(yellowTokens[1].row).toBe(2)
     });
 });
