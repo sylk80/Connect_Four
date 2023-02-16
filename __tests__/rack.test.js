@@ -44,4 +44,10 @@ describe('Rack should register the move...', () => {
         const yellowTokens = rack.getTokenList("Y")
         expect(yellowTokens).not.toBeNull();
     });
+    test('tokens should be in a column, is should be returned..', () => {
+        const rack2 = new Rack();
+        rack2.placeToken("Y", 1)
+        const yellowTokens = rack.getTokenList("Y")
+        expect(yellowTokens).toHaveLength(1)
+    });
 });
