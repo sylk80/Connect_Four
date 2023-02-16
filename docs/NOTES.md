@@ -127,7 +127,7 @@ It is RED's turn.
 
 :dart: Rack should register the token :heavy_check_mark:
 
-:dart: Token should be in a valid column
+:dart: Token should be in a valid column :heavy_check_mark:
 
 :dart: Token should occupy the lowest available space within the column
 
