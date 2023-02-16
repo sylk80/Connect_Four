@@ -35,7 +35,13 @@ describe('Rack should register the move...', () => {
         expect(newMove).toBe("YELLOW has placed a token");
     });
     test('should register the tokens placement for both colors...', () => {
-        const newMove = rack.placeToken("R", 1)
+        const newMove = rack.placeToken("R", 2)
         expect(newMove).toBe("RED has placed a token");
+    });
+    test('tokens should be in a column...', () => {
+        const rack2 = new Rack();
+        rack2.placeToken("Y", 1)
+        const yellowTokens = rack.getToken("Y")
+        expect(yellowTokens).not.toBeNull();
     });
 });

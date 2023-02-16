@@ -125,7 +125,7 @@ It is RED's turn.
 
 :dart: Player should pick a column :heavy_check_mark:
 
-:dart: Rack should register the token
+:dart: Rack should register the token :heavy_check_mark:
 
 :dart: Token should be in a valid column
 
