@@ -34,4 +34,8 @@ describe('Rack should register the move...', () => {
         const newMove = rack.placeToken("Y", 1)
         expect(newMove).toBe("YELLOW has placed a token");
     });
+    test('should register the tokens placement for both colors...', () => {
+        const newMove = rack.placeToken("R", 1)
+        expect(newMove).toBe("RED has placed a token");
+    });
 });

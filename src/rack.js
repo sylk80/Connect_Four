@@ -16,12 +16,16 @@ class Rack {
             if(COLUMNS.indexOf(column) < 0) {
                 return "Valid column - 1-7 - required as second parameter"
             } else {
-                if(color === 'Y') {
-                    return "YELLOW has placed a token"
-                } else {
-                    return null
-                }
+                    return this.placementMessage(color)
             }
+        }
+    }
+
+    placementMessage(color) {
+        if(color === 'Y') {
+            return "YELLOW has placed a token"
+        } else {
+            return "RED has placed a token"
         }
     }
 

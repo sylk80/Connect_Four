@@ -1,13 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <testExecutions version="1">
   <file path="/home/sylk/IdeaProjects/xpfarm/20230215_connect_four/__tests__/rack.test.js">
-    <testCase name="Rack should be created... should be a Rack class..." duration="1"/>
-    <testCase name="Rack should be created... should be a displayed..." duration="1"/>
+    <testCase name="Rack should be created... should be a Rack class..." duration="2"/>
+    <testCase name="Rack should be created... should be a displayed..." duration="0"/>
     <testCase name="Rack should be created... empty rack displayed..." duration="0"/>
     <testCase name="Rack should register the move... should be able to register moved..." duration="0"/>
-    <testCase name="Rack should register the move... should require color..." duration="1"/>
+    <testCase name="Rack should register the move... should require color..." duration="0"/>
     <testCase name="Rack should register the move... should require column..." duration="0"/>
     <testCase name="Rack should register the move... should register the tokens placement..." duration="0"/>
+    <testCase name="Rack should register the move... should register the tokens placement for both colors..." duration="0"/>
   </file>
   <file path="/home/sylk/IdeaProjects/xpfarm/20230215_connect_four/__tests__/game.test.js">
     <testCase name="Game should be created... should be a Game class..." duration="2"/>
