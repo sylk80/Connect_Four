@@ -44,10 +44,16 @@ describe('Rack should register the move...', () => {
         const yellowTokens = rack.getTokenList("Y")
         expect(yellowTokens).not.toBeNull();
     });
-    test('tokens should be in a column, is should be returned..', () => {
+    test('tokens should be in a column, a value should be returned..', () => {
         const rack2 = new Rack();
         rack2.placeToken("Y", 1)
-        const yellowTokens = rack.getTokenList("Y")
+        const yellowTokens = rack2.getTokenList("Y")
         expect(yellowTokens).toHaveLength(1)
+    });
+    test('tokens should be in a column, value returned should contain the column..', () => {
+        const rack3 = new Rack();
+        rack3.placeToken("Y", 1)
+        const yellowTokens = rack3.getTokenList("Y")
+        expect(yellowTokens[0].column).toBe(1)
     });
 });
