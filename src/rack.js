@@ -26,7 +26,7 @@ class Rack {
     }
 
     addTokenToRack(color, column) {
-        this.tokenList.push({color: color, column: column})
+        this.tokenList.push({color: color, column: column, row: 0})
     }
 
     placementMessage(color) {
