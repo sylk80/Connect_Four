@@ -19,9 +19,14 @@ class Rack {
             if(COLUMNS.indexOf(column) < 0) {
                 return "Valid column - 1-7 - required as second parameter"
             } else {
+                    this.addTokenToRack(color,column)
                     return this.placementMessage(color)
             }
         }
+    }
+
+    addTokenToRack(color, column) {
+        this.tokenList.push({color: color, column: column})
     }
 
     placementMessage(color) {
@@ -33,7 +38,7 @@ class Rack {
     }
 
     getTokenList(color) {
-        return this.tokenList
+        return this.tokenList.filter(element => element.color === color)
     }
 
 }
