@@ -4,6 +4,9 @@ const COLUMNS = [1, 2, 3, 4, 5, 6, 7];
 
 class Rack {
 
+    constructor() {
+        this.tokenList = []
+    }
 
     display () {
         return EMPTY_RACK
@@ -27,6 +30,10 @@ class Rack {
         } else {
             return "RED has placed a token"
         }
+    }
+
+    getTokenList(color) {
+        return this.tokenList
     }
 
 }
