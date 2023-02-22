@@ -7,11 +7,17 @@ const {
 } = require("jest-cucumber-fusion")
 
 const Game = require('../../src/game')
+const Player = require("../../src/player");
 
 let game
 let currentPlayer
 let nextPlayer
 let output
+
+beforeEach(() => {
+    const playerMOveSpy = jest.spyOn(Player.prototype, "nextColumn")
+    playerMOveSpy.mockReturnValue(4)
+})
 
 Given('the game has started', () => {
     game = new Game()
