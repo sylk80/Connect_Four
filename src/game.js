@@ -36,16 +36,31 @@ class Game {
 
     nextMove() {
         const player = this.currentPlayer();
-        const move = player.nextColumn()
-        const rack = this.rack();
-        rack.placeToken(player.getToken(), move)
-        let output = lineSeparator
-        output += player.color + " has placed a token."
-        output += lineSeparator
+        let rack = this.rack();
+        rack = this.getPlayerMoveOnRack(player, rack)
+        let output = this.getPlacingMessage(player)
         output += rack.display()
-        output += lineSeparator
-        output += "It is " + this.nextPlayer().color+  "'s turn."
+        output += this.getEndTurnMessage()
         return output
+    }
+
+    getPlayerMoveOnRack(player, rack) {
+        const move = player.nextColumn()
+        rack.placeToken(player.getToken(), move)
+        return rack
+    }
+
+    getPlacingMessage(player) {
+        let message = lineSeparator
+        message += player.color + " has placed a token."
+        message += lineSeparator
+        return message
+    }
+
+    getEndTurnMessage() {
+        let message = lineSeparator
+        message += "It is " + this.nextPlayer().color+  "'s turn."
+        return message
     }
 
 }
