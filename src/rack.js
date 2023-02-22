@@ -19,21 +19,36 @@ class Rack {
     buildRack () {
         let rack = ""
         for (let rows=1; rows <= ROWS; rows++) {
-            for(let cols=1; cols<= COLUMNS.length+1; cols++) {
-                rack += COLDIVIDER
-                if(cols < COLUMNS.length+1) {
-                    rack += EMPTY
-                } else {
-                    rack += NEWLINE
-                }
-            }
-            rack += ROWDIVIDER
-            if(rows < ROWS) {
-                rack += NEWLINE
-            }
+            rack = this.addRow(rack)
+            rack = this.addRowDivider(rows, rack)
         }
         return rack;
     }
+
+    addRow(rack) {
+        for(let columns=1; columns<= COLUMNS.length+1; columns++) {
+            rack = this.addColumn(columns,rack)
+        }
+        return rack;
+    }
+
+    addColumn(columns, rack) {
+        rack += COLDIVIDER
+        if(columns < COLUMNS.length+1) {
+            rack += EMPTY
+        } else {
+            rack += NEWLINE
+        }
+        return rack
+    }
+
+  addRowDivider(rows, rack) {
+      rack += ROWDIVIDER
+      if(rows < ROWS) {
+          rack += NEWLINE
+      }
+      return rack
+  }
 
     placeToken(color, column) {
         if(COLORS.indexOf(color) < 0) {
