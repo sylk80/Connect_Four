@@ -18,24 +18,26 @@ class Rack {
 
     buildRack () {
         let rack = ""
-        for (let rows=1; rows <= ROWS; rows++) {
-            rack = this.addRow(rack)
+        for (let rows=ROWS; rows >= 1; rows--) {
+            rack = this.addRow(rack, rows)
             rack = this.addRowDivider(rows, rack)
         }
         return rack;
     }
 
-    addRow(rack) {
+    addRow(rack, rows) {
+        let tokenInRow = this.tokenList.filter(element => element.row === rows)
         for(let columns=1; columns<= COLUMNS.length+1; columns++) {
-            rack = this.addColumn(columns,rack)
+            rack = this.addColumn(columns,rack,tokenInRow)
         }
         return rack;
     }
 
-    addColumn(columns, rack) {
+    addColumn(columns, rack, tokenInRow) {
         rack += COLDIVIDER
         if(columns < COLUMNS.length+1) {
-            rack += EMPTY
+            let token = tokenInRow.filter(element => element.column === columns)
+            rack += token.length > 0 ?  token[0].color : EMPTY
         } else {
             rack += NEWLINE
         }
@@ -44,7 +46,7 @@ class Rack {
 
   addRowDivider(rows, rack) {
       rack += ROWDIVIDER
-      if(rows < ROWS) {
+      if(rows > 1) {
           rack += NEWLINE
       }
       return rack

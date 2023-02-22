@@ -72,7 +72,7 @@ describe('Rack should register the move...', () => {
     });
     test('tokens should displayed in a column..', () => {
         const rack2 = new Rack();
-        rack2.placeToken("Y", 1)
+        rack2.placeToken("Y", 4)
         const output = rack2.display()
         expect(output).toContain(FIRST_MOVE)
     });
