@@ -44,7 +44,7 @@ describe('First move can be made, when...', () => {
         expect(nextPlayer).not.toEqual(currentPlayer);
     });
     test('current player should make a move..', () => {
-        output = currentPlayer.placeToken(4)
+        output = currentPlayer.nextColumn(4)
         expect(output).toContain(FIRST_MOVE)
     });
 });
