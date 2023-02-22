@@ -1,5 +1,8 @@
 const Game = require('../src/game.js');
+const Player = require('../src/player.js');
 const { EMPTY_RACK, FIRST_MOVE } = require("./mock/mockObjects")
+
+
 
 describe('Game should be created...', () => {
     const game = new Game();
@@ -44,7 +47,9 @@ describe('First move can be made, when...', () => {
         expect(nextPlayer).not.toEqual(currentPlayer);
     });
     test('current player should make a move..', () => {
-        output = currentPlayer.nextColumn(4)
+        let playerMOveSpy = jest.spyOn(Player, "nextColumn")
+        playerMOveSpy.mockReturnValue(4)
+        output = game.nextMove()
         expect(output).toContain(FIRST_MOVE)
     });
 });
