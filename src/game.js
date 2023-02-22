@@ -42,6 +42,7 @@ class Game {
         let output = player.color + " has placed a token"
         output += lineSeparator
         output += rack.display()
+        output += "It is " + this.nextPlayer().color+  "'s turn"
         return output
     }
 
