@@ -1,6 +1,10 @@
-const {EMPTY_RACK} = require("../__tests__/mock/mockObjects");
 const COLORS = ["Y", "R"]
 const COLUMNS = [1, 2, 3, 4, 5, 6, 7];
+const ROWDIVIDER = "+-+-+-+-+-+-+-+"
+const COLDIVIDER = "|"
+const ROWS = 6
+const EMPTY = " "
+const NEWLINE = "\n"
 
 class Rack {
 
@@ -9,7 +13,26 @@ class Rack {
     }
 
     display () {
-        return EMPTY_RACK
+        return this.buildRack()
+    }
+
+    buildRack () {
+        let rack = ""
+        for (let rows=1; rows <= ROWS; rows++) {
+            for(let cols=1; cols<= COLUMNS.length+1; cols++) {
+                rack += COLDIVIDER
+                if(cols < COLUMNS.length+1) {
+                    rack += EMPTY
+                } else {
+                    rack += NEWLINE
+                }
+            }
+            rack += ROWDIVIDER
+            if(rows < ROWS) {
+                rack += NEWLINE
+            }
+        }
+        return rack;
     }
 
     placeToken(color, column) {
