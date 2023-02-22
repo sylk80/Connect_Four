@@ -1,5 +1,5 @@
 const Game = require('../src/game.js');
-const { EMPTY_RACK } = require("./mock/mockObjects")
+const { EMPTY_RACK, FIRST_MOVE } = require("./mock/mockObjects")
 
 describe('Game should be created...', () => {
     const game = new Game();
@@ -31,7 +31,7 @@ describe('Game should be created...', () => {
 
 describe('First move can be made, when...', () => {
     const game = new Game();
-    const output = game.start()
+    let output = game.start()
     const currentPlayer = game.currentPlayer()
     const nextPlayer = game.nextPlayer()
     test('current player can be selected...', () => {
@@ -42,5 +42,9 @@ describe('First move can be made, when...', () => {
     });
     test('current and next player should be different...', () => {
         expect(nextPlayer).not.toEqual(currentPlayer);
+    });
+    test('current player should make a move..', () => {
+        output = currentPlayer.placeToken(4)
+        expect(output).toContain(FIRST_MOVE)
     });
 });

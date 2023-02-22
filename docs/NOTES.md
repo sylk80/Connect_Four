@@ -131,7 +131,7 @@ It is RED's turn.
 
 :dart: Token should occupy the lowest available space within the column :heavy_check_mark:
 
-:dart: Token should be displayed in the column
+:dart: Token should be displayed in the column :heavy_check_mark:
 
 :dart: Game should register the move
 
