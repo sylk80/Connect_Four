@@ -37,6 +37,9 @@ describe('First move can be made, when...', () => {
     let output = game.start()
     const currentPlayer = game.currentPlayer()
     const nextPlayer = game.nextPlayer()
+    const playerMOveSpy = jest.spyOn(Player.prototype, "nextColumn")
+    playerMOveSpy.mockReturnValue(4)
+    output = game.nextMove()
     test('current player can be selected...', () => {
         expect(currentPlayer).toBeDefined();
     });
@@ -47,9 +50,9 @@ describe('First move can be made, when...', () => {
         expect(nextPlayer).not.toEqual(currentPlayer);
     });
     test('current player should make a move..', () => {
-        const playerMOveSpy = jest.spyOn(Player.prototype, "nextColumn")
-        playerMOveSpy.mockReturnValue(4)
-        output = game.nextMove()
         expect(output).toContain(FIRST_MOVE)
+    });
+    test('player turn message should be displayed...', () => {
+        expect(output).toContain(currentPlayer.color + " has placed a token")
     });
 });
