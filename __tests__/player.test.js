@@ -16,4 +16,9 @@ describe('Player should be able to move...', () => {
     test('should pick a valid column...', () => {
         expect(COLUMNS).toContain(column)
     });
+    const columnManual = player.nextColumn(4)
+    test('can pick a valid column...', () => {
+        expect(COLUMNS).toContain(columnManual)
+        expect(columnManual).toBe(4)
+    });
 });
