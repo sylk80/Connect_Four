@@ -129,7 +129,7 @@ It is RED's turn.
 
 :dart: Token should be in a valid column :heavy_check_mark:
 
-:dart: Token should occupy the lowest available space within the column
+:dart: Token should occupy the lowest available space within the column :heavy_check_mark:
 
 :dart: Token should be displayed in the column
 

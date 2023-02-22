@@ -12,6 +12,20 @@ const EMPTY_RACK =
     "| | | | | | | | \n" +
     "+-+-+-+-+-+-+-+"
 
+const FIRST_MOVE =
+    "| | | | | | | | \n" +
+    "+-+-+-+-+-+-+-+\n" +
+    "| | | | | | | | \n" +
+    "+-+-+-+-+-+-+-+\n" +
+    "| | | | | | | | \n" +
+    "+-+-+-+-+-+-+-+\n" +
+    "| | | | | | | | \n" +
+    "+-+-+-+-+-+-+-+\n" +
+    "| | | | | | | | \n" +
+    "+-+-+-+-+-+-+-+\n" +
+    "| | | |Y| | | | \n" +
+    "+-+-+-+-+-+-+-+"
+
 const COLUMNS = [1, 2, 3, 4, 5, 6, 7]
 
-module.exports = { EMPTY_RACK, COLUMNS }
+module.exports = { EMPTY_RACK, FIRST_MOVE, COLUMNS }
