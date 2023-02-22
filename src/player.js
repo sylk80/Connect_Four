@@ -12,6 +12,10 @@ class Player {
             return Math.floor(Math.random() * COLUMNS)+1
         }
     }
+
+    getToken() {
+        return this.color[0]
+    }
 }
 
 module.exports = Player
