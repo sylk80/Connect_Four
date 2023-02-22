@@ -47,7 +47,7 @@ describe('First move can be made, when...', () => {
         expect(nextPlayer).not.toEqual(currentPlayer);
     });
     test('current player should make a move..', () => {
-        let playerMOveSpy = jest.spyOn(Player, "nextColumn")
+        const playerMOveSpy = jest.spyOn(Player.prototype, "nextColumn")
         playerMOveSpy.mockReturnValue(4)
         output = game.nextMove()
         expect(output).toContain(FIRST_MOVE)
