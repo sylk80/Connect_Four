@@ -1,41 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <testExecutions version="1">
-  <file path="/home/sylk/IdeaProjects/xpfarm/20230215_connect_four/__tests__/game.test.js">
-    <testCase name="Game should be created... should be a Game class..." duration="1"/>
-    <testCase name="Game should be created... should be able to start..." duration="0"/>
-    <testCase name="Game should be created... players should be there..." duration="0"/>
-    <testCase name="Game should be created... rack should be there..." duration="0"/>
-    <testCase name="Game should be created... rack should be displayed..." duration="1"/>
-    <testCase name="Game should be created... start message should be displayed..." duration="0"/>
-    <testCase name="Game should be created... creation message should be displayed..." duration="0"/>
-    <testCase name="First move can be made, when... current player can be selected..." duration="0"/>
-    <testCase name="First move can be made, when... next player can be selected..." duration="0"/>
-    <testCase name="First move can be made, when... current and next player should be different..." duration="1"/>
-    <testCase name="First move can be made, when... current player should make a move.." duration="0"/>
-    <testCase name="First move can be made, when... player turn message should be displayed..." duration="0"/>
-    <testCase name="First move can be made, when... next turn message should be displayed..." duration="0"/>
+  <file path="/home/sylk/IdeaProjects/xpfarm/20230215_connect_four/bdd/features/first_move_feature.steps.js">
+    <testCase name="Players should make their moves First move of first player" duration="3"/>
   </file>
-  <file path="/home/sylk/IdeaProjects/xpfarm/20230215_connect_four/__tests__/rack.test.js">
-    <testCase name="Rack should be created... should be a Rack class..." duration="1"/>
-    <testCase name="Rack should be created... should be a displayed..." duration="0"/>
-    <testCase name="Rack should be created... empty rack displayed..." duration="1"/>
-    <testCase name="Rack should register the move... should be able to register moved..." duration="0"/>
-    <testCase name="Rack should register the move... should require color..." duration="0"/>
-    <testCase name="Rack should register the move... should require column..." duration="0"/>
-    <testCase name="Rack should register the move... should register the tokens placement..." duration="0"/>
-    <testCase name="Rack should register the move... should register the tokens placement for both colors..." duration="1"/>
-    <testCase name="Rack should register the move... tokens should be in a column..." duration="0"/>
-    <testCase name="Rack should register the move... tokens should be in a column, a value should be returned.." duration="0"/>
-    <testCase name="Rack should register the move... tokens should be in a column, value returned should contain the column.." duration="4"/>
-    <testCase name="Rack should register the move... tokens should occupy the lowest available space within the column.." duration="1"/>
-    <testCase name="Rack should register the move... tokens should always occupy the lowest available space within the column.." duration="0"/>
-    <testCase name="Rack should register the move... tokens should displayed in a column.." duration="0"/>
-    <testCase name="Rack should register the move... tokens should displayed in the right column.." duration="0"/>
-  </file>
-  <file path="/home/sylk/IdeaProjects/xpfarm/20230215_connect_four/__tests__/player.test.js">
-    <testCase name="Player should be created... should be a Player class..." duration="1"/>
-    <testCase name="Player should be able to move... should pick a column..." duration="1"/>
-    <testCase name="Player should be able to move... should pick a valid column..." duration="0"/>
-    <testCase name="Player should be able to move... can pick a valid column..." duration="0"/>
+  <file path="/home/sylk/IdeaProjects/xpfarm/20230215_connect_four/bdd/features/empty_rack_feature.steps.js">
+    <testCase name="Game should start with an empty rack Empty rack creation" duration="2"/>
   </file>
 </testExecutions>

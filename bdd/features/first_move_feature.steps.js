@@ -31,22 +31,20 @@ When('the first player makes a move', () => {
 
 Then('it should be visible on the board', () => {
     expect(output).toContain("\n" +
-        currentPlayer + " has placed a token\n" +
-        "\n" +
-        "| | | | | | | | \n" +
+        currentPlayer.color + " has placed a token.\n" +
+        "| | | | | | | |\n" +
         "+-+-+-+-+-+-+-+\n" +
-        "| | | | | | | | \n" +
+        "| | | | | | | |\n" +
         "+-+-+-+-+-+-+-+\n" +
-        "| | | | | | | | \n" +
+        "| | | | | | | |\n" +
         "+-+-+-+-+-+-+-+\n" +
-        "| | | | | | | | \n" +
+        "| | | | | | | |\n" +
         "+-+-+-+-+-+-+-+\n" +
-        "| | | | | | | | \n" +
+        "| | | | | | | |\n" +
         "+-+-+-+-+-+-+-+\n" +
-        "| | | |Y| | | | \n" +
+        "| | | |Y| | | |\n" +
         "+-+-+-+-+-+-+-+\n" +
-        "\n" +
-        "It is " + nextPlayer + "'s turn.")
+        "It is " + nextPlayer.color + "'s turn.")
 })
 
 Fusion("first_move.feature")

@@ -39,10 +39,12 @@ class Game {
         const move = player.nextColumn()
         const rack = this.rack();
         rack.placeToken(player.color[0], move)
-        let output = player.color + " has placed a token"
+        let output = lineSeparator
+        output += player.color + " has placed a token."
         output += lineSeparator
         output += rack.display()
-        output += "It is " + this.nextPlayer().color+  "'s turn"
+        output += lineSeparator
+        output += "It is " + this.nextPlayer().color+  "'s turn."
         return output
     }
 
