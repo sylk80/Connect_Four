@@ -91,13 +91,22 @@ Empty rack is created.
 
 :dart: Creation message should be displayed :heavy_check_mark:
 
+### Scenario 2
+
+:radio_button: As a staring user
+
+:arrow_right: I want to place a token
+
+:arrow_left:  So that I can see it appear in the rack
+
+
 ### User acceptance test 2
 
 :heavy_plus_sign: Given the game has started
 
 :construction: When the first player makes a move
 
-:heavy_exclamation_mark: Then it should be visible on the board
+:heavy_exclamation_mark: Then it should be visible on the rack
 
 ```
 
@@ -135,3 +144,39 @@ It is RED's turn.
 
 :dart: Game should register the move :heavy_check_mark:
 
+
+### Scenario 3
+
+:radio_button: As the second user to turn
+
+:arrow_right: I want to place a token
+
+:arrow_left:  So that I can see it appear in the rack next to the first token
+
+### User acceptance test 3
+
+:heavy_plus_sign: Given the game has started
+
+:construction: When the second player makes a move
+
+:heavy_exclamation_mark: Then it should be visible on the rack along with the first token
+
+```
+
+RED has placed a token
+
+| | | | | | | | 
++-+-+-+-+-+-+-+
+| | | | | | | | 
++-+-+-+-+-+-+-+
+| | | | | | | | 
++-+-+-+-+-+-+-+
+| | | | | | | | 
++-+-+-+-+-+-+-+
+| | | | | | | | 
++-+-+-+-+-+-+-+
+| | |R|Y| | | | 
++-+-+-+-+-+-+-+
+
+It is YELLOW's turn.
+```
