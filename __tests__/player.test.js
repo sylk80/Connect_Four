@@ -21,4 +21,8 @@ describe('Player should be able to move...', () => {
         expect(COLUMNS).toContain(columnManual)
         expect(columnManual).toBe(4)
     });
+    test('should return token value...', () => {
+        const token = player.getToken()
+        expect(token).toBe('Y')
+    });
 });

@@ -1,9 +1,57 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <testExecutions version="1">
-  <file path="/home/sylk/IdeaProjects/xpfarm/20230215_connect_four/bdd/features/first_move_feature.steps.js">
-    <testCase name="Players should make their moves First move of first player" duration="3"/>
+  <file path="/home/sylk/IdeaProjects/xpfarm/20230215_connect_four/__tests__/game.test.js">
+    <testCase name="Game should be created... should be a Game class..." duration="1"/>
+    <testCase name="Game should be created... should be able to start..." duration="1"/>
+    <testCase name="Game should be created... players should be there..." duration="0"/>
+    <testCase name="Game should be created... rack should be there..." duration="0"/>
+    <testCase name="Game should be created... rack should be displayed..." duration="0"/>
+    <testCase name="Game should be created... start message should be displayed..." duration="1"/>
+    <testCase name="Game should be created... creation message should be displayed..." duration="0"/>
+    <testCase name="First move can be made, when... encountered a declaration exception" duration="1">
+      <failure message="TypeError: player.getToken is not a function"><![CDATA[TypeError: player.getToken is not a function
+    at Game.nextMove (/home/sylk/IdeaProjects/xpfarm/20230215_connect_four/src/game.js:41:32)
+    at Suite.<anonymous> (/home/sylk/IdeaProjects/xpfarm/20230215_connect_four/__tests__/game.test.js:42:19)
+    at addSpecsToSuite (/home/sylk/IdeaProjects/xpfarm/20230215_connect_four/node_modules/jest-jasmine2/build/jasmine/Env.js:444:51)
+    at Env.describe (/home/sylk/IdeaProjects/xpfarm/20230215_connect_four/node_modules/jest-jasmine2/build/jasmine/Env.js:414:11)
+    at describe (/home/sylk/IdeaProjects/xpfarm/20230215_connect_four/node_modules/jest-jasmine2/build/jasmine/jasmineLight.js:88:18)
+    at Object.<anonymous> (/home/sylk/IdeaProjects/xpfarm/20230215_connect_four/__tests__/game.test.js:35:1)
+    at Runtime._execModule (/home/sylk/IdeaProjects/xpfarm/20230215_connect_four/node_modules/jest-runtime/build/index.js:1299:24)
+    at Runtime._loadModule (/home/sylk/IdeaProjects/xpfarm/20230215_connect_four/node_modules/jest-runtime/build/index.js:898:12)
+    at Runtime.requireModule (/home/sylk/IdeaProjects/xpfarm/20230215_connect_four/node_modules/jest-runtime/build/index.js:746:10)
+    at jasmine2 (/home/sylk/IdeaProjects/xpfarm/20230215_connect_four/node_modules/jest-jasmine2/build/index.js:230:13)]]></failure>
+    </testCase>
   </file>
-  <file path="/home/sylk/IdeaProjects/xpfarm/20230215_connect_four/bdd/features/empty_rack_feature.steps.js">
-    <testCase name="Game should start with an empty rack Empty rack creation" duration="2"/>
+  <file path="/home/sylk/IdeaProjects/xpfarm/20230215_connect_four/__tests__/rack.test.js">
+    <testCase name="Rack should be created... should be a Rack class..." duration="1"/>
+    <testCase name="Rack should be created... should be a displayed..." duration="0"/>
+    <testCase name="Rack should be created... empty rack displayed..." duration="1"/>
+    <testCase name="Rack should register the move... should be able to register moved..." duration="0"/>
+    <testCase name="Rack should register the move... should require color..." duration="0"/>
+    <testCase name="Rack should register the move... should require column..." duration="0"/>
+    <testCase name="Rack should register the move... should register the tokens placement..." duration="1"/>
+    <testCase name="Rack should register the move... should register the tokens placement for both colors..." duration="0"/>
+    <testCase name="Rack should register the move... tokens should be in a column..." duration="0"/>
+    <testCase name="Rack should register the move... tokens should be in a column, a value should be returned.." duration="0"/>
+    <testCase name="Rack should register the move... tokens should be in a column, value returned should contain the column.." duration="0"/>
+    <testCase name="Rack should register the move... tokens should occupy the lowest available space within the column.." duration="1"/>
+    <testCase name="Rack should register the move... tokens should always occupy the lowest available space within the column.." duration="0"/>
+    <testCase name="Rack should register the move... tokens should displayed in a column.." duration="0"/>
+    <testCase name="Rack should register the move... tokens should displayed in the right column.." duration="0"/>
+  </file>
+  <file path="/home/sylk/IdeaProjects/xpfarm/20230215_connect_four/__tests__/player.test.js">
+    <testCase name="Player should be created... should be a Player class..." duration="1"/>
+    <testCase name="Player should be able to move... should pick a column..." duration="1"/>
+    <testCase name="Player should be able to move... should pick a valid column..." duration="0"/>
+    <testCase name="Player should be able to move... can pick a valid column..." duration="0"/>
+    <testCase name="Player should be able to move... should return token value..." duration="1">
+      <failure message="TypeError: player.getToken is not a function"><![CDATA[TypeError: player.getToken is not a function
+    at Object.<anonymous> (/home/sylk/IdeaProjects/xpfarm/20230215_connect_four/__tests__/player.test.js:25:30)
+    at Object.asyncJestTest (/home/sylk/IdeaProjects/xpfarm/20230215_connect_four/node_modules/jest-jasmine2/build/jasmineAsyncInstall.js:106:37)
+    at /home/sylk/IdeaProjects/xpfarm/20230215_connect_four/node_modules/jest-jasmine2/build/queueRunner.js:45:12
+    at new Promise (<anonymous>)
+    at mapper (/home/sylk/IdeaProjects/xpfarm/20230215_connect_four/node_modules/jest-jasmine2/build/queueRunner.js:28:19)
+    at /home/sylk/IdeaProjects/xpfarm/20230215_connect_four/node_modules/jest-jasmine2/build/queueRunner.js:75:41]]></failure>
+    </testCase>
   </file>
 </testExecutions>

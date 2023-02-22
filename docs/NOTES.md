@@ -133,5 +133,5 @@ It is RED's turn.
 
 :dart: Token should be displayed in the column :heavy_check_mark:
 
-:dart: Game should register the move
+:dart: Game should register the move :heavy_check_mark:
 
