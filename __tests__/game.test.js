@@ -55,4 +55,7 @@ describe('First move can be made, when...', () => {
     test('player turn message should be displayed...', () => {
         expect(output).toContain(currentPlayer.color + " has placed a token")
     });
+    test('next turn message should be displayed...', () => {
+        expect(output).toContain("It is " + nextPlayer.color + "'s turn");
+    });
 });
