@@ -26,6 +26,20 @@ const FIRST_MOVE =
     "| | | |Y| | | |\n" +
     "+-+-+-+-+-+-+-+"
 
+const TEST_MOVE =
+    "| | | | | | | |\n" +
+    "+-+-+-+-+-+-+-+\n" +
+    "| | | | | | | |\n" +
+    "+-+-+-+-+-+-+-+\n" +
+    "| | | | | | | |\n" +
+    "+-+-+-+-+-+-+-+\n" +
+    "| | | | | | | |\n" +
+    "+-+-+-+-+-+-+-+\n" +
+    "| | | |Y| | | |\n" +
+    "+-+-+-+-+-+-+-+\n" +
+    "| | | |Y| | | |\n" +
+    "+-+-+-+-+-+-+-+"
+
 const COLUMNS = [1, 2, 3, 4, 5, 6, 7]
 
-module.exports = { EMPTY_RACK, FIRST_MOVE, COLUMNS }
+module.exports = { EMPTY_RACK, FIRST_MOVE, TEST_MOVE, COLUMNS }

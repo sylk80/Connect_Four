@@ -1,5 +1,5 @@
 const Rack = require('../src/rack.js');
-const {EMPTY_RACK, FIRST_MOVE} = require("./mock/mockObjects");
+const {EMPTY_RACK, FIRST_MOVE, TEST_MOVE} = require("./mock/mockObjects");
 
 describe('Rack should be created...', () => {
     const rack = new Rack();
@@ -75,5 +75,12 @@ describe('Rack should register the move...', () => {
         rack2.placeToken("Y", 4)
         const output = rack2.display()
         expect(output).toContain(FIRST_MOVE)
+    });
+    test('tokens should displayed in the right column..', () => {
+        const rack2 = new Rack();
+        rack2.placeToken("Y", 4)
+        rack2.placeToken("Y", 4)
+        const output = rack2.display()
+        expect(output).toContain(TEST_MOVE)
     });
 });
