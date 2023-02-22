@@ -39,7 +39,10 @@ class Game {
         const move = player.nextColumn()
         const rack = this.rack();
         rack.placeToken(player.color[0], move)
-        return rack.display()
+        let output = player.color + " has placed a token"
+        output += lineSeparator
+        output += rack.display()
+        return output
     }
 
 }
