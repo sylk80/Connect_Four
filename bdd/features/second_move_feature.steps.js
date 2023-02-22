@@ -23,15 +23,16 @@ Given('the game has started', () => {
     game = new Game()
     currentPlayer = game.currentPlayer()
     nextPlayer = game.nextPlayer()
-})
-
-When('the first player makes a move', () => {
     output = game.nextMove()
 })
 
-Then('it should be visible on the rack', () => {
+When('the second player makes a move', () => {
+    output = game.nextMove()
+})
+
+Then('it should be visible on the rack along with the first', () => {
     expect(output).toContain("\n" +
-        currentPlayer.color + " has placed a token.\n" +
+        nextPlayer.color + " has placed a token.\n" +
         "| | | | | | | |\n" +
         "+-+-+-+-+-+-+-+\n" +
         "| | | | | | | |\n" +
@@ -40,14 +41,14 @@ Then('it should be visible on the rack', () => {
         "+-+-+-+-+-+-+-+\n" +
         "| | | | | | | |\n" +
         "+-+-+-+-+-+-+-+\n" +
-        "| | | | | | | |\n" +
+        "| | | |R| | | |\n" +
         "+-+-+-+-+-+-+-+\n" +
         "| | | |Y| | | |\n" +
         "+-+-+-+-+-+-+-+\n" +
-        "It is " + nextPlayer.color + "'s turn.")
+        "It is " + currentPlayer.color + "'s turn.")
 })
 
-Fusion("first_move.feature")
+Fusion("second_move.feature")
 
 
 
