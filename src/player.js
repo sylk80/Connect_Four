@@ -5,8 +5,12 @@ class Player {
         this.color = color
     }
 
-    nextColumn( ) {
-        return Math.floor(Math.random() * COLUMNS)+1
+    nextColumn(column) {
+        if(column > 0 && column <= COLUMNS+1) {
+            return column
+        } else {
+            return Math.floor(Math.random() * COLUMNS)+1
+        }
     }
 }
 
