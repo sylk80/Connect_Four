@@ -4,8 +4,12 @@ const Rack = require("./rack.js")
 const startMessage = "Connect Four game starts"
 const creationMessage = "Empty rack is created."
 const lineSeparator = "\n"
+const PLAYER_NUMBER = 2;
 class Game {
 
+    constructor() {
+        this.round=0;
+    }
 
     start() {
         return lineSeparator +
@@ -17,11 +21,12 @@ class Game {
     }
 
     currentPlayer() {
-        return this.players()[0]
+        return this.players()[this.round % PLAYER_NUMBER]
     }
 
     nextPlayer() {
-        return this.players()[1]
+        const nextPlayerIndex = this.round % PLAYER_NUMBER === 1 ? 0 : 1
+        return this.players()[nextPlayerIndex]
     }
 
     players() {
@@ -41,6 +46,7 @@ class Game {
         let output = this.getPlacingMessage(player)
         output += rack.display()
         output += this.getEndTurnMessage()
+        this.round++
         return output
     }
 

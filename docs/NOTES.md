@@ -183,7 +183,7 @@ It is YELLOW's turn.
 
 ### Unit tests 3
 
-:dart: Player should be changed with the turn
+:dart: Player should be changed with the turn :heavy_check_mark:
 
 :dart: Rack should preserve previous moves
 
