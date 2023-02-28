@@ -59,3 +59,20 @@ describe('First move can be made, when...', () => {
         expect(output).toContain("It is " + nextPlayer.color + "'s turn");
     });
 });
+
+describe('First move can be made, when...', () => {
+    const game = new Game();
+    let output = game.start();
+    const currentPlayer = game.currentPlayer()
+    const nextPlayer = game.nextPlayer()
+    const playerMOveSpy = jest.spyOn(Player.prototype, "nextColumn")
+    playerMOveSpy.mockReturnValue(4)
+    output = game.nextMove()
+    const currentPlayerNew = game.currentPlayer()
+    const nextPlayerNew = game.nextPlayer()
+    test('player should be changed with the turn...', () => {
+        expect(currentPlayerNew).toEqual(nextPlayer)
+        expect(nextPlayerNew).toEqual(currentPlayer)
+    });
+
+});

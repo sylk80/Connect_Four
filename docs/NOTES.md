@@ -180,3 +180,15 @@ RED has placed a token
 
 It is YELLOW's turn.
 ```
+
+### Unit tests 3
+
+:dart: Player should be changed with the turn
+
+:dart: Rack should preserve previous moves
+
+:dart: Token should be displayed along with the previous one
+
+:dart: Game should rotate players and preserve rack state
+
+:dart: Token should be placed in the lowest row available
