@@ -64,19 +64,21 @@ describe('First move can be made, when...', () => {
     const game = new Game();
     let output = game.start();
     const currentPlayerFirst = game.currentPlayer()
-    console.log(currentPlayerFirst)
     const nextPlayerFirst = game.nextPlayer()
-    console.log(nextPlayerFirst)
     const playerMOveSpy = jest.spyOn(Player.prototype, "nextColumn")
     playerMOveSpy.mockReturnValue(4)
     output = game.nextMove()
+    const tokenListFirst = game.rack().tokenList;
     const currentPlayerSecond = game.currentPlayer()
-    console.log(currentPlayerSecond)
     const nextPlayerSecond = game.nextPlayer()
-    console.log(nextPlayerSecond)
+    const output2 = game.nextMove()
+    const tokenListSecond = game.rack().tokenList;
     test('player should be changed with the turn...', () => {
         expect(currentPlayerSecond).toEqual(nextPlayerFirst)
         expect(nextPlayerSecond).toEqual(currentPlayerFirst)
+    });
+    test('rack should preserve previous moves...', () => {
+        expect(tokenListSecond).toContain(tokenListFirst)
     });
 
 });
