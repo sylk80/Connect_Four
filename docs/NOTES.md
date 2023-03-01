@@ -185,7 +185,7 @@ It is YELLOW's turn.
 
 :dart: Player should be changed with the turn :heavy_check_mark:
 
-:dart: Rack should preserve previous moves
+:dart: Rack should preserve previous moves :heavy_check_mark:
 
 :dart: Token should be displayed along with the previous one
 

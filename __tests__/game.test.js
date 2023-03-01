@@ -80,5 +80,10 @@ describe('First move can be made, when...', () => {
     test('rack should preserve previous moves...', () => {
         expect(tokenListSecond).toContain(tokenListFirst)
     });
+    test('token should be displayed along with the previous one...', () => {
+        expect(output).toContain(currentPlayerFirst.getToken())
+        expect(output2).toContain(currentPlayerFirst.getToken())
+        expect(output2).toContain(currentPlayerSecond.getToken())
+    });
 
 });
