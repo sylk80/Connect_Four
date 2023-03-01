@@ -94,5 +94,9 @@ describe('First move can be made, when...', () => {
         expect(currentPlayerThird).toEqual(currentPlayerFirst)
         expect(nextPlayerThird).toEqual(nextPlayerFirst)
     });
+    test('game should preserve rack state...', () => {
+        const rack2 = game.rack()
+        expect(rack2.state(0)).toEqual(FIRST_MOVE)
+    });
 
 });
