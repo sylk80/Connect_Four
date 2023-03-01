@@ -73,6 +73,8 @@ describe('First move can be made, when...', () => {
     const nextPlayerSecond = game.nextPlayer()
     const output2 = game.nextMove()
     const tokenListSecond = game.rack().tokenList;
+    const currentPlayerThird = game.currentPlayer()
+    const nextPlayerThird = game.nextPlayer()
     test('player should be changed with the turn...', () => {
         expect(currentPlayerSecond).toEqual(nextPlayerFirst)
         expect(nextPlayerSecond).toEqual(currentPlayerFirst)
@@ -87,6 +89,10 @@ describe('First move can be made, when...', () => {
     });
     test('token should be displayed along with the previous one on the rack...', () => {
         expect(output2).toContain(SECOND_MOVE)
+    });
+    test('game should rotate players...', () => {
+        expect(currentPlayerThird).toEqual(currentPlayerFirst)
+        expect(nextPlayerThird).toEqual(nextPlayerFirst)
     });
 
 });

@@ -187,7 +187,7 @@ It is YELLOW's turn.
 
 :dart: Rack should preserve previous moves :heavy_check_mark:
 
-:dart: Token should be displayed along with the previous one
+:dart: Token should be displayed along with the previous one :heavy_check_mark:
 
 :dart: Game should rotate players and preserve rack state
 
