@@ -1,6 +1,6 @@
 const Game = require('../src/game.js');
 const Player = require('../src/player.js');
-const { EMPTY_RACK, FIRST_MOVE } = require("./mock/mockObjects")
+const { EMPTY_RACK, FIRST_MOVE, SECOND_MOVE } = require("./mock/mockObjects")
 
 
 
@@ -84,6 +84,9 @@ describe('First move can be made, when...', () => {
         expect(output).toContain(currentPlayerFirst.getToken())
         expect(output2).toContain(currentPlayerFirst.getToken())
         expect(output2).toContain(currentPlayerSecond.getToken())
+    });
+    test('token should be displayed along with the previous one on the rack...', () => {
+        expect(output2).toContain(SECOND_MOVE)
     });
 
 });
