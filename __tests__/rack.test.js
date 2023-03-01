@@ -84,3 +84,11 @@ describe('Rack should register the move...', () => {
         expect(output).toContain(TEST_MOVE)
     });
 });
+
+describe('Rack should preserve state...', () => {
+    const rack = new Rack();
+    const states = rack.stateList;
+    test('should have stateList..', () => {
+        expect(states).toBeDefined()
+    });
+});
