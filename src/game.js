@@ -8,7 +8,8 @@ const PLAYER_NUMBER = 2;
 class Game {
 
     constructor() {
-        this.round=0;
+        this.round=0
+        this.rackOfGame=new Rack()
     }
 
     start() {
@@ -36,13 +37,14 @@ class Game {
     }
 
     rack() {
-        return new Rack()
+        return this.rackOfGame
     }
 
     nextMove() {
         const player = this.currentPlayer();
         let rack = this.rack();
         rack = this.getPlayerMoveOnRack(player, rack)
+        this.rackOfGame = rack
         let output = this.getPlacingMessage(player)
         output += rack.display()
         output += this.getEndTurnMessage()

@@ -68,7 +68,7 @@ describe('First move can be made, when...', () => {
     const playerMOveSpy = jest.spyOn(Player.prototype, "nextColumn")
     playerMOveSpy.mockReturnValue(4)
     output = game.nextMove()
-    const tokenListFirst = game.rack().tokenList;
+    const tokenListFirst = game.rack().tokenList[0]
     const currentPlayerSecond = game.currentPlayer()
     const nextPlayerSecond = game.nextPlayer()
     const output2 = game.nextMove()
