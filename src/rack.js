@@ -11,6 +11,7 @@ class Rack {
     constructor() {
         this.tokenList = []
         this.stateList = []
+        this.stateList[0] = this.buildRack()
     }
 
     display () {
@@ -85,6 +86,10 @@ class Rack {
 
     getTokenList(color) {
         return this.tokenList.filter(element => element.color === color)
+    }
+
+    states(step) {
+        return this.stateList[step];
     }
 
 }

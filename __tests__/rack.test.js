@@ -93,6 +93,6 @@ describe('Rack should preserve state...', () => {
     });
     test('should return states..', () => {
         const first_state = rack.states(0)
-        expect(first_state).toBeDefined(EMPTY_RACK)
+        expect(first_state).toEqual(EMPTY_RACK)
     });
 });
