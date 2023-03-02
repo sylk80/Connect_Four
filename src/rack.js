@@ -10,6 +10,7 @@ class Rack {
 
     constructor() {
         this.tokenList = []
+        this.stateList = []
     }
 
     display () {
