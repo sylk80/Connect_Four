@@ -1,6 +1,6 @@
 const Game = require('../src/game.js');
 const Player = require('../src/player.js');
-const { EMPTY_RACK, FIRST_MOVE, SECOND_MOVE } = require("./mock/mockObjects")
+const { EMPTY_RACK, FIRST_MOVE, SECOND_MOVE, SIXTH_MOVE } = require("./mock/mockObjects")
 
 
 
@@ -97,6 +97,13 @@ describe('First move can be made, when...', () => {
     test('game should preserve rack state...', () => {
         const rack2 = game.rack()
         expect(rack2.states(1)).toEqual(FIRST_MOVE)
+    });
+    test('token should be placed in the lowest row available...', () => {
+        game.nextMove()
+        game.nextMove()
+        game.nextMove()
+        const output6 = game.nextMove()
+        expect(output6).toContain(SIXTH_MOVE)
     });
 
 });
