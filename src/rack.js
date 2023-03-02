@@ -69,6 +69,8 @@ class Rack {
 
     addTokenToRack(color, column) {
         this.tokenList.push({color: color, column: column, row: this.getLowestInColumn(column)})
+        const nextState = this.buildRack();
+        this.stateList.push(nextState)
     }
 
     getLowestInColumn(column) {

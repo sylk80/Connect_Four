@@ -96,7 +96,7 @@ describe('First move can be made, when...', () => {
     });
     test('game should preserve rack state...', () => {
         const rack2 = game.rack()
-        expect(rack2.state(0)).toEqual(FIRST_MOVE)
+        expect(rack2.states(1)).toEqual(FIRST_MOVE)
     });
 
 });
