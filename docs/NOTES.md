@@ -189,6 +189,6 @@ It is YELLOW's turn.
 
 :dart: Token should be displayed along with the previous one :heavy_check_mark:
 
-:dart: Game should rotate players and preserve rack state
+:dart: Game should rotate players and preserve rack state :heavy_check_mark:
 
 :dart: Token should be placed in the lowest row available

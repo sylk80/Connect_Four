@@ -28,9 +28,9 @@ class Rack {
     }
 
     addRow(rack, rows) {
-        let tokenInRow = this.tokenList.filter(element => element.row === rows)
+        let tokensInRow = this.tokenList.filter(element => element.row === rows)
         for(let columns=1; columns<= COLUMNS.length+1; columns++) {
-            rack = this.addColumn(columns,rack,tokenInRow)
+            rack = this.addColumn(columns,rack,tokensInRow)
         }
         return rack;
     }
@@ -38,8 +38,8 @@ class Rack {
     addColumn(columns, rack, tokenInRow) {
         rack += COLDIVIDER
         if(columns < COLUMNS.length+1) {
-            let token = tokenInRow.filter(element => element.column === columns)
-            rack += token.length > 0 ?  token[0].color : EMPTY
+            let tokenInCell = tokenInRow.filter(element => element.column === columns)
+            rack += tokenInCell.length > 0 ?  tokenInCell[0].color : EMPTY
         } else {
             rack += NEWLINE
         }
@@ -55,16 +55,24 @@ class Rack {
   }
 
     placeToken(color, column) {
-        if(COLORS.indexOf(color) < 0) {
-            return "Valid color - Y / R - required as first parameter"
+    const validation = this.checkPlacement(color, column);
+    if (validation.length < 1) {
+        this.addTokenToRack(color,column)
+        return this.placementMessage(color)
         } else {
-            if(COLUMNS.indexOf(column) < 0) {
-                return "Valid column - 1-7 - required as second parameter"
-            } else {
-                    this.addTokenToRack(color,column)
-                    return this.placementMessage(color)
-            }
+        return validation
         }
+    }
+
+    checkPlacement(color, column) {
+        let returnValue = ""
+        if (COLORS.indexOf(color) < 0) {
+            returnValue = "Valid color - Y / R - required as first parameter"
+        }
+        if (COLUMNS.indexOf(column) < 0) {
+            returnValue = "Valid column - 1-7 - required as second parameter"
+        }
+        return returnValue
     }
 
     addTokenToRack(color, column) {
