@@ -4,19 +4,19 @@
     <testCase name="Rack should be created... should be a Rack class..." duration="1"/>
     <testCase name="Rack should be created... should be a displayed..." duration="0"/>
     <testCase name="Rack should be created... empty rack displayed..." duration="0"/>
-    <testCase name="Rack should register the move... should be able to register moved..." duration="1"/>
+    <testCase name="Rack should register the move... should be able to register moved..." duration="0"/>
     <testCase name="Rack should register the move... should require color..." duration="0"/>
     <testCase name="Rack should register the move... should require column..." duration="0"/>
     <testCase name="Rack should register the move... should register the tokens placement..." duration="0"/>
-    <testCase name="Rack should register the move... should register the tokens placement for both colors..." duration="0"/>
+    <testCase name="Rack should register the move... should register the tokens placement for both colors..." duration="1"/>
     <testCase name="Rack should register the move... tokens should be in a column..." duration="0"/>
     <testCase name="Rack should register the move... tokens should be in a column, a value should be returned.." duration="0"/>
-    <testCase name="Rack should register the move... tokens should be in a column, value returned should contain the column.." duration="0"/>
-    <testCase name="Rack should register the move... tokens should occupy the lowest available space within the column.." duration="1"/>
+    <testCase name="Rack should register the move... tokens should be in a column, value returned should contain the column.." duration="1"/>
+    <testCase name="Rack should register the move... tokens should occupy the lowest available space within the column.." duration="0"/>
     <testCase name="Rack should register the move... tokens should always occupy the lowest available space within the column.." duration="0"/>
     <testCase name="Rack should register the move... tokens should displayed in a column.." duration="0"/>
-    <testCase name="Rack should register the move... tokens should displayed in the right column.." duration="0"/>
-    <testCase name="Rack should preserve state... should have stateList.." duration="1"/>
+    <testCase name="Rack should register the move... tokens should displayed in the right column.." duration="1"/>
+    <testCase name="Rack should preserve state... should have stateList.." duration="0"/>
     <testCase name="Rack should preserve state... should return states.." duration="0"/>
   </file>
   <file path="/home/sylk/IdeaProjects/xpfarm/20230215_connect_four/__tests__/game.test.js">
@@ -28,25 +28,51 @@
     <testCase name="Game should be created... start message should be displayed..." duration="0"/>
     <testCase name="Game should be created... creation message should be displayed..." duration="0"/>
     <testCase name="First move can be made, when... current player can be selected..." duration="0"/>
-    <testCase name="First move can be made, when... next player can be selected..." duration="0"/>
+    <testCase name="First move can be made, when... next player can be selected..." duration="3"/>
     <testCase name="First move can be made, when... current and next player should be different..." duration="1"/>
     <testCase name="First move can be made, when... current player should make a move.." duration="0"/>
     <testCase name="First move can be made, when... player turn message should be displayed..." duration="0"/>
     <testCase name="First move can be made, when... next turn message should be displayed..." duration="0"/>
     <testCase name="First move can be made, when... player should be changed with the turn..." duration="0"/>
-    <testCase name="First move can be made, when... rack should preserve previous moves..." duration="1"/>
+    <testCase name="First move can be made, when... rack should preserve previous moves..." duration="0"/>
     <testCase name="First move can be made, when... token should be displayed along with the previous one..." duration="0"/>
     <testCase name="First move can be made, when... token should be displayed along with the previous one on the rack..." duration="0"/>
     <testCase name="First move can be made, when... game should rotate players..." duration="0"/>
     <testCase name="First move can be made, when... game should preserve rack state..." duration="0"/>
     <testCase name="First move can be made, when... token should be placed in the lowest row available..." duration="1"/>
     <testCase name="First move can be made, when... token can&apos;t be placed outside of rows ..." duration="0"/>
+    <testCase name="First move can be made, when... invalid steps should be made again ..." duration="1">
+      <failure message="Error: expect(received).toContain(expected) // indexOf"><![CDATA[Error: expect(received).toContain(expected) // indexOf
+
+Expected substring: "Column is full, please pick another column"
+Received string:    "
+RED has placed a token.
+| | | |R| | | |
++-+-+-+-+-+-+-+
+| | | |Y| | | |
++-+-+-+-+-+-+-+
+| | | |R| | | |
++-+-+-+-+-+-+-+
+| | | |Y| | | |
++-+-+-+-+-+-+-+
+| | | |R| | | |
++-+-+-+-+-+-+-+
+| | | |Y| | | |
++-+-+-+-+-+-+-+
+It is YELLOW's turn."
+    at Object.<anonymous> (/home/sylk/IdeaProjects/xpfarm/20230215_connect_four/__tests__/game.test.js:114:25)
+    at Object.asyncJestTest (/home/sylk/IdeaProjects/xpfarm/20230215_connect_four/node_modules/jest-jasmine2/build/jasmineAsyncInstall.js:106:37)
+    at /home/sylk/IdeaProjects/xpfarm/20230215_connect_four/node_modules/jest-jasmine2/build/queueRunner.js:45:12
+    at new Promise (<anonymous>)
+    at mapper (/home/sylk/IdeaProjects/xpfarm/20230215_connect_four/node_modules/jest-jasmine2/build/queueRunner.js:28:19)
+    at /home/sylk/IdeaProjects/xpfarm/20230215_connect_four/node_modules/jest-jasmine2/build/queueRunner.js:75:41]]></failure>
+    </testCase>
   </file>
   <file path="/home/sylk/IdeaProjects/xpfarm/20230215_connect_four/__tests__/player.test.js">
     <testCase name="Player should be created... should be a Player class..." duration="1"/>
     <testCase name="Player should be able to move... should pick a column..." duration="0"/>
-    <testCase name="Player should be able to move... should pick a valid column..." duration="1"/>
+    <testCase name="Player should be able to move... should pick a valid column..." duration="0"/>
     <testCase name="Player should be able to move... can pick a valid column..." duration="0"/>
-    <testCase name="Player should be able to move... should return token value..." duration="0"/>
+    <testCase name="Player should be able to move... should return token value..." duration="1"/>
   </file>
 </testExecutions>

@@ -109,4 +109,8 @@ describe('First move can be made, when...', () => {
         const output7 = game.nextMove()
         expect(output7).toContain(SIXTH_MOVE)
     });
+    test('invalid steps should be made again ...', () => {
+        const output7 = game.nextMove()
+        expect(output7).toContain("Column is full, please pick another column")
+    });
 });
