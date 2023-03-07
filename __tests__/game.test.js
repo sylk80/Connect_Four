@@ -105,5 +105,8 @@ describe('First move can be made, when...', () => {
         const output6 = game.nextMove()
         expect(output6).toContain(SIXTH_MOVE)
     });
-
+    test('token can\'t be placed outside of rows ...', () => {
+        const output7 = game.nextMove()
+        expect(output7).toContain(SIXTH_MOVE)
+    });
 });
