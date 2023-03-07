@@ -72,6 +72,9 @@ class Rack {
         if (COLUMNS.indexOf(column) < 0) {
             returnValue = "Valid column - 1-7 - required as second parameter"
         }
+        if(this.getLowestInColumn(column) > ROWS) {
+            returnValue = "Column is full, please pick another column"
+        }
         return returnValue
     }
 

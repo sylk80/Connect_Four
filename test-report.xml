@@ -1,38 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <testExecutions version="1">
-  <file path="/home/sylk/IdeaProjects/xpfarm/20230215_connect_four/__tests__/game.test.js">
-    <testCase name="Game should be created... should be a Game class..." duration="1"/>
-    <testCase name="Game should be created... should be able to start..." duration="1"/>
-    <testCase name="Game should be created... players should be there..." duration="0"/>
-    <testCase name="Game should be created... rack should be there..." duration="0"/>
-    <testCase name="Game should be created... rack should be displayed..." duration="0"/>
-    <testCase name="Game should be created... start message should be displayed..." duration="0"/>
-    <testCase name="Game should be created... creation message should be displayed..." duration="1"/>
-    <testCase name="First move can be made, when... current player can be selected..." duration="0"/>
-    <testCase name="First move can be made, when... next player can be selected..." duration="0"/>
-    <testCase name="First move can be made, when... current and next player should be different..." duration="1"/>
-    <testCase name="First move can be made, when... current player should make a move.." duration="0"/>
-    <testCase name="First move can be made, when... player turn message should be displayed..." duration="0"/>
-    <testCase name="First move can be made, when... next turn message should be displayed..." duration="0"/>
-    <testCase name="First move can be made, when... player should be changed with the turn..." duration="0"/>
-    <testCase name="First move can be made, when... rack should preserve previous moves..." duration="0"/>
-    <testCase name="First move can be made, when... token should be displayed along with the previous one..." duration="0"/>
-    <testCase name="First move can be made, when... token should be displayed along with the previous one on the rack..." duration="1"/>
-    <testCase name="First move can be made, when... game should rotate players..." duration="0"/>
-    <testCase name="First move can be made, when... game should preserve rack state..." duration="0"/>
-    <testCase name="First move can be made, when... token should be placed in the lowest row available..." duration="0"/>
-  </file>
   <file path="/home/sylk/IdeaProjects/xpfarm/20230215_connect_four/__tests__/rack.test.js">
     <testCase name="Rack should be created... should be a Rack class..." duration="1"/>
-    <testCase name="Rack should be created... should be a displayed..." duration="0"/>
+    <testCase name="Rack should be created... should be a displayed..." duration="1"/>
     <testCase name="Rack should be created... empty rack displayed..." duration="0"/>
     <testCase name="Rack should register the move... should be able to register moved..." duration="0"/>
     <testCase name="Rack should register the move... should require color..." duration="1"/>
     <testCase name="Rack should register the move... should require column..." duration="0"/>
     <testCase name="Rack should register the move... should register the tokens placement..." duration="0"/>
     <testCase name="Rack should register the move... should register the tokens placement for both colors..." duration="0"/>
-    <testCase name="Rack should register the move... tokens should be in a column..." duration="0"/>
-    <testCase name="Rack should register the move... tokens should be in a column, a value should be returned.." duration="1"/>
+    <testCase name="Rack should register the move... tokens should be in a column..." duration="1"/>
+    <testCase name="Rack should register the move... tokens should be in a column, a value should be returned.." duration="0"/>
     <testCase name="Rack should register the move... tokens should be in a column, value returned should contain the column.." duration="0"/>
     <testCase name="Rack should register the move... tokens should occupy the lowest available space within the column.." duration="0"/>
     <testCase name="Rack should register the move... tokens should always occupy the lowest available space within the column.." duration="0"/>
@@ -40,28 +18,34 @@
     <testCase name="Rack should register the move... tokens should displayed in the right column.." duration="1"/>
     <testCase name="Rack should preserve state... should have stateList.." duration="0"/>
     <testCase name="Rack should preserve state... should return states.." duration="0"/>
-    <testCase name="Token should not be placed if column is full encountered a declaration exception" duration="0">
-      <failure message="Error: expect(received).toBe(expected) // Object.is equality"><![CDATA[Error: expect(received).toBe(expected) // Object.is equality
-
-Expected: "Column is full, please pick another column"
-Received: "YELLOW has placed a token"
-    at Suite.<anonymous> (/home/sylk/IdeaProjects/xpfarm/20230215_connect_four/__tests__/rack.test.js:109:22)
-    at addSpecsToSuite (/home/sylk/IdeaProjects/xpfarm/20230215_connect_four/node_modules/jest-jasmine2/build/jasmine/Env.js:444:51)
-    at Env.describe (/home/sylk/IdeaProjects/xpfarm/20230215_connect_four/node_modules/jest-jasmine2/build/jasmine/Env.js:414:11)
-    at describe (/home/sylk/IdeaProjects/xpfarm/20230215_connect_four/node_modules/jest-jasmine2/build/jasmine/jasmineLight.js:88:18)
-    at Object.<anonymous> (/home/sylk/IdeaProjects/xpfarm/20230215_connect_four/__tests__/rack.test.js:100:1)
-    at Runtime._execModule (/home/sylk/IdeaProjects/xpfarm/20230215_connect_four/node_modules/jest-runtime/build/index.js:1299:24)
-    at Runtime._loadModule (/home/sylk/IdeaProjects/xpfarm/20230215_connect_four/node_modules/jest-runtime/build/index.js:898:12)
-    at Runtime.requireModule (/home/sylk/IdeaProjects/xpfarm/20230215_connect_four/node_modules/jest-runtime/build/index.js:746:10)
-    at jasmine2 (/home/sylk/IdeaProjects/xpfarm/20230215_connect_four/node_modules/jest-jasmine2/build/index.js:230:13)
-    at runTestInternal (/home/sylk/IdeaProjects/xpfarm/20230215_connect_four/node_modules/jest-runner/build/runTest.js:380:22)]]></failure>
-    </testCase>
+  </file>
+  <file path="/home/sylk/IdeaProjects/xpfarm/20230215_connect_four/__tests__/game.test.js">
+    <testCase name="Game should be created... should be a Game class..." duration="1"/>
+    <testCase name="Game should be created... should be able to start..." duration="0"/>
+    <testCase name="Game should be created... players should be there..." duration="0"/>
+    <testCase name="Game should be created... rack should be there..." duration="0"/>
+    <testCase name="Game should be created... rack should be displayed..." duration="0"/>
+    <testCase name="Game should be created... start message should be displayed..." duration="0"/>
+    <testCase name="Game should be created... creation message should be displayed..." duration="0"/>
+    <testCase name="First move can be made, when... current player can be selected..." duration="1"/>
+    <testCase name="First move can be made, when... next player can be selected..." duration="0"/>
+    <testCase name="First move can be made, when... current and next player should be different..." duration="0"/>
+    <testCase name="First move can be made, when... current player should make a move.." duration="0"/>
+    <testCase name="First move can be made, when... player turn message should be displayed..." duration="1"/>
+    <testCase name="First move can be made, when... next turn message should be displayed..." duration="0"/>
+    <testCase name="First move can be made, when... player should be changed with the turn..." duration="0"/>
+    <testCase name="First move can be made, when... rack should preserve previous moves..." duration="0"/>
+    <testCase name="First move can be made, when... token should be displayed along with the previous one..." duration="0"/>
+    <testCase name="First move can be made, when... token should be displayed along with the previous one on the rack..." duration="0"/>
+    <testCase name="First move can be made, when... game should rotate players..." duration="1"/>
+    <testCase name="First move can be made, when... game should preserve rack state..." duration="0"/>
+    <testCase name="First move can be made, when... token should be placed in the lowest row available..." duration="0"/>
   </file>
   <file path="/home/sylk/IdeaProjects/xpfarm/20230215_connect_four/__tests__/player.test.js">
     <testCase name="Player should be created... should be a Player class..." duration="1"/>
     <testCase name="Player should be able to move... should pick a column..." duration="0"/>
     <testCase name="Player should be able to move... should pick a valid column..." duration="0"/>
-    <testCase name="Player should be able to move... can pick a valid column..." duration="1"/>
+    <testCase name="Player should be able to move... can pick a valid column..." duration="0"/>
     <testCase name="Player should be able to move... should return token value..." duration="0"/>
   </file>
 </testExecutions>
