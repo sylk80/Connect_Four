@@ -96,3 +96,15 @@ describe('Rack should preserve state...', () => {
         expect(first_state).toEqual(EMPTY_RACK)
     });
 });
+
+describe('Token should not be placed if column is full', () => {
+    const rack2 = new Rack();
+    rack2.placeToken("Y", 4)
+    rack2.placeToken("R", 4)
+    rack2.placeToken("Y", 4)
+    rack2.placeToken("R", 4)
+    rack2.placeToken("Y", 4)
+    rack2.placeToken("R", 4)
+    const nextMove = rack2.placeToken("Y", 4)
+    expect(nextMove).toBe("Column is full, please pick another column")
+});
